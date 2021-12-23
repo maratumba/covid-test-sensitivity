@@ -8,6 +8,16 @@
         ></v-text-field>
       </template>
      <template
+        v-slot:item.manufacturer="{ item }"
+      >
+        <span :class="sensitivityClass(item.ct_17_36)">{{ item.manufacturer }}%</span>
+     </template>
+     <template
+        v-slot:item.testName="{ item }"
+      >
+        <span :class="sensitivityClass(item.ct_17_36)">{{ item.testName }}%</span>
+     </template>
+     <template
         v-slot:item.ct_17_36="{ item }"
       >
         <span :class="sensitivityClass(item.ct_17_36)">{{ (item.ct_17_36*100.).toFixed(2) }}%</span>

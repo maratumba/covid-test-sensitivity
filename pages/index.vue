@@ -5,7 +5,12 @@
         <v-card-text>
           <nuxt-content :document="disclaimer" />
           <ResultsTable :items="tests" />
-          Made by [gulyamani](gulyamani.com). [Source code](https://github.com/maratumba/covid-test-sensitivity).
+          <div class="text-right d-flex flex-row justify-end align-center mt-4">
+          <div>Made by <a href="https://gulyamani.com">gulyamani</a> (2021)</div>
+           <div class="ml-2">
+             <a target="_blank" href="https://github.com/maratumba/covid-test-sensitivity"><img style="height: 2rem" :src="require('~/assets/GitHub-Mark/PNG/GitHub-Mark-Light-64px.png')"/></a>
+          </div>
+          </div>
         </v-card-text>
       </v-card>
     </v-col>
