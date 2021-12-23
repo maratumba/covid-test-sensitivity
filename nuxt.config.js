@@ -7,15 +7,30 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - covid-test-sensitivity',
-    title: 'covid-test-sensitivity',
+    title: 'COVID-19 Test Sensitivity',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { hid: 'description', name: 'description', content: 'COVID-19 Test Sensitivity List' },
+      { name: 'format-detection', content: 'telephone=no' },
+      { hid: "og:type", property: "og:type", content: "article" },
+      { hid: "og:url", property: "og:url", content: "https://covid-tests.netlify.app/" },
+      { hid: "og:title", property: "og:title", content: title },
+      { hid: "og:image", property: "og:image", content: image },
+      {
+        hid: "og:description",
+        property: "og:description",
+        content: "COVID-19 Test Sensitivity List",
+      },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:description", content: description },
+      { name: "twitter:title", content: title },
+      { name: "twitter:site", content: "@gulyamani" },
+      { name: "twitter:image", content: "https://covid-tests.netlify.app/thumbnail.png" },
+      { name: "twitter:creator", content: "@gulyamani" },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
