@@ -10,12 +10,12 @@
      <template
         v-slot:item.manufacturer="{ item }"
       >
-        <span :class="sensitivityClass(item.ct_17_36)">{{ item.manufacturer }}%</span>
+        <span :class="sensitivityClass(item.ct_25_30)">{{ item.manufacturer }}%</span>
      </template>
      <template
         v-slot:item.testName="{ item }"
       >
-        <span :class="sensitivityClass(item.ct_17_36)">{{ item.testName }}%</span>
+        <span :class="sensitivityClass(item.ct_25_30)">{{ item.testName }}%</span>
      </template>
      <template
         v-slot:item.ct_17_36="{ item }"
@@ -25,7 +25,7 @@
      <template
         v-slot:item.ct_25_30="{ item }"
       >
-        <span :class="sensitivityClass(item.ct_25_30)">{{ (item.ct_25_30*100.).toFixed(2) }}%</span>
+        <span :class="'font-weight-black '  + sensitivityClass(item.ct_25_30)">{{ (item.ct_25_30*100.).toFixed(2) }}%</span>
      </template>
      <template
         v-slot:item.ct_gt_30="{ item }"
@@ -48,7 +48,7 @@ export default {
       if(!val) return'';
       else if(val<0.5) return "red--text text--lighten-3";
       else if(val>0.75) return "green--text text--lighten-3";
-      else return '';
+      else return "text--lighten-1";
     }
   },
   data: () => ({
@@ -84,13 +84,12 @@ export default {
         value: "ct_gt_30",
         text: "CT > 30",
       },
-        {
-          sortable: true,
-          align: "center",
-          value: "ct_17_36",
-          text: "CT 17-36",
-        },
-
+      {
+        sortable: true,
+        align: "center",
+        value: "ct_17_36",
+        text: "CT 17-36",
+      },
     ]
   })
 }
