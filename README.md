@@ -1,5 +1,7 @@
 # covid-test-sensitivity
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/59fd6433-96b5-4041-b531-b5d1fc0afe42/deploy-status)](https://app.netlify.com/sites/covid-tests/deploys)
+
 Listing/searching COVID tests and their sensitivities. Based on the preprint of the [research article](https://doi.org/10.1101/2021.05.11.21257016) by Scheiblauer et al. 2021. Please note that this has not been peer reviewed and should not be used to guide clinical practice.
 
 ## Build Setup
